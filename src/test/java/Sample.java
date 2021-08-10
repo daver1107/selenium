@@ -16,7 +16,7 @@ public class Sample {
 
     static void sleep() {
         try {
-            Thread.sleep(500);
+            Thread.sleep(700);
         } catch (Exception e) {
         }
     }
