@@ -18,6 +18,7 @@ public class Sample {
         try {
             Thread.sleep(700);
         } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -27,7 +28,7 @@ public class Sample {
     }
 
     @Test
-    void mainPageTest() {
+    void addToCart() {
         this.dr.get(testURL);
         sleep();
         WebElement element1 = this.dr.findElementByXPath("/html/body/div/div/header/div/div/div[1]/div/ul/li[1]/a");
