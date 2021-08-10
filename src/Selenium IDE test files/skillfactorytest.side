@@ -1,0 +1,95 @@
+{
+  "id": "89f76a49-5498-4900-a16e-e41811d118af",
+  "version": "2.0",
+  "name": "skillfactorytest",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "bc46ef45-cb11-4361-acce-502cfdaf5705",
+    "name": "skillfactorytest1",
+    "commands": [{
+      "id": "3c7e89fe-adef-42be-8389-d6b44ff7a82c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8c2303f-a53f-4e1f-b7b0-e04e5ad006d7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ece0cb83-cf4a-49f7-b15f-5fa80482ba04",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "skillfactory"
+    }, {
+      "id": "7a3b9994-15fa-4b88-a58e-8e9a0a819da8",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "47714ea8-9d31-4361-afb9-4ab772f6cef2",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > .tF2Cxc .LC20lb",
+      "targets": [
+        ["css=div:nth-child(2) > .tF2Cxc .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div/div/div/div/a/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Онлайн-школа SkillFactory — ваш прямой путь в IT ...')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win5823",
+      "windowTimeout": 2000
+    }, {
+      "id": "568c3459-d08e-4cb4-a017-813129454dd5",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win5823}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38d2fd30-db62-4361-a4e3-d0a9c09b1dc0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Программирование",
+      "targets": [
+        ["linkText=Программирование", "linkText"],
+        ["css=.tn-elem__2932077841614853390711 > .tn-atom", "css:finder"],
+        ["xpath=//a[contains(text(),'Программирование')]", "xpath:link"],
+        ["xpath=//div[@id='rec293207784']/div/div/div[47]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://skillfactory.ru/programmirovanie')])[3]", "xpath:href"],
+        ["xpath=//div[47]/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "dfddfb49-7dbf-4f0c-aa23-941be76632e1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bc46ef45-cb11-4361-acce-502cfdaf5705"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}
