@@ -10,9 +10,12 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Sample {
+    private static final String cssMenuElement = "#s-header-catalog > ul > li:nth-child(1) > a";
+    private static final String xpathAddToCartElement = "/html/body/div/div/div/main/div/div/section/ul/li[1]/div/div[4]/form/div/div/div[1]/input";
+    private static final String xpathCheckOutElement = "/html/body/section/div[1]/div/div/div[2]/div/div/a";
     public RemoteWebDriver dr;
-    public static final String URL = "http://localhost:4444/wd/hub/";
-    public static String testURL = "http://www.dogspecial.ru";
+    private static final String URL = "http://localhost:4444/wd/hub/";
+    private static final String testURL = "http://www.dogspecial.ru";
 
     static void sleep() {
         try {
@@ -31,11 +34,11 @@ public class Sample {
     void addToCart() {
         dr.get(testURL);
         sleep();
-        dr.findElementByCssSelector("#s-header-catalog > ul > li:nth-child(1) > a").click();
+        dr.findElementByCssSelector(cssMenuElement).click();
         sleep();
-        dr.findElementByXPath("/html/body/div/div/div/main/div/div/section/ul/li[1]/div/div[4]/form/div/div/div[1]/input").click();
+        dr.findElementByXPath(xpathAddToCartElement).click();
         sleep();
-        dr.findElementByXPath("/html/body/section/div[1]/div/div/div[2]/div/div/a").click();
+        dr.findElementByXPath(xpathCheckOutElement).click();
         sleep();
 
     }
