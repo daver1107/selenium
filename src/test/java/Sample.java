@@ -16,7 +16,7 @@ public class Sample {
 
     static void sleep() {
         try {
-            Thread.sleep(700);
+            Thread.sleep(200);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -29,19 +29,15 @@ public class Sample {
 
     @Test
     void addToCart() {
-        this.dr.get(testURL);
+        dr.get(testURL);
         sleep();
-        WebElement element1 = this.dr.findElementByXPath("/html/body/div/div/header/div/div/div[1]/div/ul/li[1]/a");
-        element1.click();
+        dr.findElementByCssSelector("#s-header-catalog > ul > li:nth-child(1) > a").click();
         sleep();
-        WebElement element2 = this.dr.findElementByXPath("/html/body/div/div/div/main/div/div/section/ul/li[1]/div/div[4]/form/div/div/div[1]/input");
+        dr.findElementByXPath("/html/body/div/div/div/main/div/div/section/ul/li[1]/div/div[4]/form/div/div/div[1]/input").click();
         sleep();
-        element2.click();
+        dr.findElementByXPath("/html/body/section/div[1]/div/div/div[2]/div/div/a").click();
         sleep();
-        WebElement element3 = this.dr.findElementByXPath("/html/body/section/div[1]/div/div/div[2]/div/div/a");
-        sleep();
-        element3.click();
-        sleep();
+
     }
 
     @AfterTest
