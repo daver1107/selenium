@@ -42,8 +42,8 @@ public class Sample {
 
     @AfterTest
     void close(){
-        this.dr.close();
-        this.dr.quit();
+        dr.close();
+        dr.quit();
     }
 
 }
