@@ -31,7 +31,7 @@ public class Sample {
         dr.get(testURL);
         sleep();
         //Пошагово добавляем товар в корзину
-        dr.findElementByXPath("//*[@class = \"s-catalog-list\"]/li[1]").click();
+        dr.findElementByXPath("//*[.='Апортировочные предметы']").click();
         sleep();
         dr.findElementByXPath("//*[@class = \"s-button js-add-button\"]").click();
         sleep();
@@ -70,10 +70,10 @@ public class Sample {
         sleep();
     }
 
-//    @AfterTest
-//    void close(){
-//        dr.close();
-//        dr.quit();
-//    }
+    @AfterTest
+    void close(){
+        dr.close();
+        dr.quit();
+    }
 
 }
